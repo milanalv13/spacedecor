@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceDecor.Ua — Авторський декор ручної роботи</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0c100e;
+      --bg-card: #151c18;
+      --accent-gold: #d4af37;
+      --accent-gold-light: #f3e5ab;
+      --accent-gold-dark: #aa820a;
+      --text-main: #f0f4f1;
+      --text-muted: #9ab0a3;
+      --border-color: rgba(212, 175, 55, 0.25);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+    .top-bar {
+      background: linear-gradient(90deg, #aa820a, #d4af37, #aa820a);
+      color: #000;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(12, 16, 14, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .logo-img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--accent-gold);
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .logo-text h1 { font-size: 1.4rem; color: #fff; }
+    .logo-text p { font-size: 0.7rem; color: var(--accent-gold); text-transform: uppercase; }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: 0.3s;
+      font-size: 0.9rem;
+    }
+    .hero {
+      padding: 60px 5% 40px;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, rgba(12, 16, 14, 1) 75%);
+    }
+    .hero h2 { font-size: 2.5rem; color: var(--accent-gold-light); margin-bottom: 15px; }
+    .hero p { max-width: 600px; margin: 0 auto 25px; color: var(--text-muted); font-size: 1rem; }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--accent-gold-light);
+      margin: 40px 0 25px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 5% 60px;
+    }
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-img {
+      height: 320px;
+      width: 100%;
+      object-fit: cover;
+      background-color: #1a221d;
+    }
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-title { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+    .product-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; flex-grow: 1; }
+    .product-price { font-size: 1.3rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 15px; }
+    .about-section {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      padding: 50px 5%;
+      text-align: center;
+    }
+    .about-section p { max-width: 700px; margin: 0 auto 15px; color: var(--text-muted); }
+    footer {
+      text-align: center;
+      padding: 30px 5%;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">✨ Першому покупцеві безкоштовна доставка! 🚚📦</div>
+  <header>
+    <a href="#" class="logo">
+      <div class="logo-img">SD</div>
+      <div class="logo-text">
+        <h1>SpaceDecor.Ua</h1>
+        <p>Авторський декор</p>
+      </div>
+    </a>
+    <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold">Direct</a>
+  </header>
+  <section class="hero">
+    <h2>Створіть казку у своєму домі</h2>
+    <p>Ексклюзивний авторський декор ручної роботи. Прикрасьте ваш дім чи офіс або оберіть особливий подарунок.</p>
+  </section>
+  <h2 class="section-title">Каталог Авторських Робіт</h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="https://i.postimg.cc/QxzTmhkC/66A0AD02-3841-4767-8161-D6F1FFC6C350.png" alt="Композиція" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Композиція «Золота Свічка»</h3>
+        <p class="product-desc">Засніжена авторська композиція із підсвічником, золото-срібними гілочками та свічкою.</p>
+        <div class="product-price">1 200 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.postimg.cc/vTkZrHRv/IMG-4416.jpg" alt="Куля" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Куля «Срібний іній»</h3>
+        <p class="product-desc">Авторська підвісна куля з білими квітами, засніженою хвоєю та LED-гірляндою над каміном.</p>
+        <div class="product-price">1 450 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.postimg.cc/DZmhxkc2/IMG-4936.jpg" alt="Панно" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Хвойне панно «Зимова казка»</h3>
+        <p class="product-desc">Вишукане настінне панно із засніженими гілками, шишками, іграшками та підвісним оленем.</p>
+        <div class="product-price">2 100 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.postimg.cc/QVZrNBZx/IMG-4937.jpg" alt="Вінок" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Вінок «Камінна ніч»</h3>
+        <p class="product-desc">Різдвяний асиметричний вінок преміум-якості з інтегрованим сяйвом LED-вогників.</p>
+        <div class="product-price">1 850 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.postimg.cc/QxcFQ1tw/IMG-4938.jpg" alt="Підвісна куля" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Підвісна куля «Білий пуансетій»</h3>
+        <p class="product-desc">Декоративна куля з об'ємною квіткою, кришталевими краплями та золотистими гілочками.</p>
+        <div class="product-price">1 250 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.postimg.cc/bwTdMP1m/IMG-4939.jpg" alt="Свічник" class="product-img">
+      <div class="product-info">
+        <h3 class="product-title">Свічник «Витончене сяйво»</h3>
+        <p class="product-desc">Елегантна композиція з високою витою свічкою на дерев'яній підставці, підсвічена вогниками.</p>
+        <div class="product-price">1 600 грн</div>
+        <a href="https://ig.me/m/v.space.decor.ua" target="_blank" class="btn-gold" style="text-align:center;">Замовити в Direct</a>
+      </div>
+    </div>
+  </div>
+  <section class="about-section">
+    <h2 class="section-title" style="margin-top:0;">Про SpaceDecor.Ua</h2>
+    <p>Кожна композиція — це результат кропіткої ручної роботи. Ми створюємо декор, який наповнює дім затишком та святковим настроєм.</p>
+    <p>📩 Для замовлення пишіть у Direct Instagram: <strong>@v.space.decor.ua</strong></p>
+  </section>
+  <footer>
+    <p>© SpaceDecor.Ua — Авторський декор ручної роботи. Усі права захищено.</p>
+  </footer>
+</body>
+</html>
